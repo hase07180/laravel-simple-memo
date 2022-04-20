@@ -64,7 +64,7 @@
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                    document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -84,12 +84,12 @@
             <div class="row">
                 <div class="col-md-2 p-0">
                     <div class="card">
-                        <div class="card-header">左カラム</div>
+                        <div class="card-header">タグ一覧</div>
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="/" class="card-text d-block">全て表示</a>
+                            @foreach($tags as $tag)
+                            <a href="/?tag={{$tag['id']}}" class="card-text d-block">{{ $tag['name'] }}</a>
+                            @endforeach
                         </div>
                     </div>
                 </div>
