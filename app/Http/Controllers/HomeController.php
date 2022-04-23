@@ -37,6 +37,7 @@ class HomeController extends Controller
     public function store(Request $request)
     {
         $posts = $request->all();
+        $request->validate(['content' => 'required']);
         //dump dieの略→ メソッドの引数の取った値を確認して展開して止める⇨ データ確認を行う(デバッグ関数)
 
         // ===== ここからトランザクション開始 =====
@@ -89,6 +90,7 @@ class HomeController extends Controller
     public function update(Request $request)
     {
         $posts = $request->all();
+        $request->validate(['content' => 'required']);
         //トランザクションスタート
         DB::transaction(function () use ($posts) {
             Memo::where('id', $posts['memo_id'])->update(['content' => $posts['content']]);
