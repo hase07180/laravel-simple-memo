@@ -13,10 +13,11 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     @yield('javascript')
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -97,7 +98,8 @@
 
                 <div class="col-md-4 p-0">
                     <div class="card">
-                        <div class="card-header">メモ一覧</div>
+                        <div class="card-header">メモ一覧 <a href="{{ route('home') }}"><i
+                                    class="fas fa-plus-circle"></i></a></div>
                         <div class="card-body">
                             @foreach($memos as$memo)
                             <a href="/edit/{{$memo['id']}}" class="card-text d-block">{{ $memo['content'] }}</a>
