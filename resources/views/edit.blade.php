@@ -8,7 +8,7 @@
 <div class="card">
     <div class="card-header d-flex justify-content-between">
         メモ編集
-        <form class="card-body" id="delete-form" action="{{ route('destroy') }}" method="POST">
+        <form class="" id="delete-form" action="{{ route('destroy') }}" method="POST">
             @csrf
             <input type="hidden" name="memo_id" value="{{ $edit_memo[0]['id'] }}">
             <i class="fas fa-trash" onclick="deleteHandle(event);"></i>
