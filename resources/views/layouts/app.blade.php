@@ -85,7 +85,7 @@
         {{-- 3カラムに変更 --}}
         <main class="">
             <div class="row">
-                <div class="col-md-2 p-0">
+                <div class="col-sm-12 col-md-2 p-0">
                     <div class="card">
                         <div class="card-header">タグ一覧</div>
                         <div class="card-body my-card-body">
@@ -97,7 +97,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 p-0">
+                <div class="col-sm-12 col-md-4 p-0">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between">メモ一覧 <a href="{{ route('home') }}"><i
                                     class="fas fa-plus-circle"></i></a></div>
@@ -110,7 +110,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 p-0">
+                <div class="col-sm-12 col-md-6 p-0">
                     @yield('content')
                 </div>
             </div>
