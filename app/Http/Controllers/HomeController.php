@@ -61,6 +61,9 @@ class HomeController extends Controller
                 }
             }
         });
+
+        $img = $request->imgpath->store('');
+        dd($img);
         // ===== ここまでがトランザクションの範囲 =====
 
 
